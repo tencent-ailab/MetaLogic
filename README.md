@@ -4,7 +4,7 @@
 This repository contains MetaLogic, a logical reasoning explanation dataset with fine-grained structure. 
 
 <div align="center">
-    <img width="90%" alt="MetaLogic overview" src="figure/metalogic.pdf"/>
+    <img width="90%" alt="MetaLogic overview" src="https://github.com/tencent-ailab/MetaLogic/blob/main/figure/metalogic.pdf"/>
 </div>
 
 Our paper "MetaLogic: Logical Reasoning Explanations with Fine-Grained Structure" is accepted by EMNLP 2022.
