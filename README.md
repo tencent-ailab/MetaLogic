@@ -3,7 +3,9 @@
 ## Overview
 This repository contains MetaLogic, a logical reasoning explanation dataset with fine-grained structure. 
 
-(figure)
+<div align="center">
+    <img width="90%" alt="MetaLogic overview" src="./.figures/metalogic.pdf"/>
+</div>
 
 Our paper "MetaLogic: Logical Reasoning Explanations with Fine-Grained Structure" is accepted by EMNLP 2022.
 
