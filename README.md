@@ -52,7 +52,7 @@ python3 OnceGenerator.py \
     --dev_data ../metalogic/metalogic_dev.json \
     --test_data ../metalogic/metalogic_test.json \
     --model_name_or_path t5-11b \
-    --bs 4 --lr 1e-5 --epochs 500 --adafactor \
+    --bs 4 --lr 1e-5 --epochs 300 --adafactor \
     --eval_epoch 10 \
     --code_dir $ROOT_DIR/code \
     --exp_dir $ROOT_DIR/exp/once \
@@ -67,7 +67,7 @@ python3 OnceGenerator.py \
     --dev_data ../metalogic/metalogic_dev.json \
     --test_data ../metalogic/metalogic_test.json \
     --model_name_or_path t5-large \
-    --bs 32 --lr 1e-5 --epochs 200 --adafactor \
+    --bs 32 --lr 1e-5 --epochs 300 --adafactor \
     --eval_epoch 10 \
     --code_dir $ROOT_DIR/code \
     --exp_dir $ROOT_DIR/exp/once_large \
@@ -97,7 +97,7 @@ python3 MultitaskGenerator.py \
     --dev_data ../metalogic/metalogic_dev.json \
     --test_data ../metalogic/metalogic_test.json \
     --model_name_or_path t5-11b \
-    --bs 4 --lr 1e-5 --epochs 500 --adafactor \
+    --bs 4 --lr 1e-5 --epochs 300 --adafactor \
     --eval_epoch 10 \
     --code_dir $ROOT_DIR/code \
     --exp_dir $ROOT_DIR/exp/multi \
@@ -114,7 +114,7 @@ python3 MultitaskGenerator.py \
     --dev_data ../metalogic/metalogic_dev.json \
     --test_data ../metalogic/metalogic_test.json \
     --model_name_or_path t5-large \
-    --bs 32 --lr 1e-5 --epochs 200 --adafactor \
+    --bs 32 --lr 1e-5 --epochs 300 --adafactor \
     --eval_epoch 10 \
     --code_dir $ROOT_DIR/code \
     --exp_dir $ROOT_DIR/exp/multi_large \
@@ -182,3 +182,6 @@ python3 inference.py \
 cd $ROOT_DIR/code
 python3 show_results.py --prediction_path $EXP_DIR/evaluation/$FILE_NAME
 ```
+
+## Disclaimer
+This is not an officially supported Tencent product.
