@@ -11,7 +11,7 @@ Our paper "MetaLogic: Logical Reasoning Explanations with Fine-Grained Structure
 
 ## Dataset
 `metalogic/metalogic_train.json`, `metalogic/metalogic_dev.json`, `metalogic/metalogic_test.json` are the training, development and test sets, respectively. The format of data item:
-* `id_string`: data_id
+* `id_string`: data id.
 * `proof`: the meta-structure.
 * `sent_dict`
   * `sent`: the plain sentence.
@@ -36,7 +36,7 @@ Our paper "MetaLogic: Logical Reasoning Explanations with Fine-Grained Structure
     
 
 ## Code
-The implementation of following baselines are also available:
+Implementation of the following baselines are also available:
 * All-at-Once [T5](https://www.jmlr.org/papers/volume21/20-074/20-074.pdf?ref=https://githubhelp.com)
 * MultiTask [T5](https://www.jmlr.org/papers/volume21/20-074/20-074.pdf?ref=https://githubhelp.com)
 * [MetGen](https://arxiv.org/pdf/2205.02593.pdf)
@@ -180,5 +180,5 @@ python3 inference.py \
 ### View the evaluation results
 ```angular2html
 cd $ROOT_DIR/code
-python3 show_results.py --prediction_path $EXP_DIR/evaluation/file_name
+python3 show_results.py --prediction_path $EXP_DIR/evaluation/$FILE_NAME
 ```
