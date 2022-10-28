@@ -7,7 +7,7 @@ This repository contains MetaLogic, a logical reasoning explanation dataset with
     <img width="90%" alt="MetaLogic overview" src="figure/metalogic.png"/>
 </div>
 
-Our paper "MetaLogic: Logical Reasoning Explanations with Fine-Grained Structure" is accepted by EMNLP 2022.
+Our paper "[MetaLogic: Logical Reasoning Explanations with Fine-Grained Structure](https://arxiv.org/pdf/2210.12487.pdf)" is accepted by EMNLP 2022.
 
 ## Dataset
 `metalogic/metalogic_train.json`, `metalogic/metalogic_dev.json`, `metalogic/metalogic_test.json` are the training, development and test sets, respectively. The format of data item:
