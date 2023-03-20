@@ -1,0 +1,6 @@
+glog==0.3.1
+numpy==1.19.5
+scikit_learn==1.1.1
+torch==1.7.1
+tqdm==4.61.0
+transformers==4.8.0
