@@ -66,21 +66,6 @@ token2degree = {v:k for k,v in degree2token.items()}
 def preprocess_raw_data(datas):
     for data_item in datas:
 
-        # merge context and option sentences
-        sents = deepcopy(data_item['context_dict'])
-        sents.update(data_item['option_dict'])
-        
-        for sent_id in sents.keys():
-            inner_info = data_item['inner_formulae_and_sentences'][sent_id]
-            
-            fts = inner_info['formulae_triples']
-            fts = [[operator_reduction(ft[0]),f"v{ft[1]}",ft[2].strip(),operator_reduction(ft[3]),f"v{ft[4]}"] for ft in fts]
-            inner_info['formulae_triples'] = fts
-            
-            sents[sent_id]['inner_info'] = inner_info
-        
-        data_item['sent_dict'] = sents
-
         # context
         context_with_variable = ""
         for sent_id, sent_info in data_item['sent_dict'].items():
@@ -89,19 +74,20 @@ def preprocess_raw_data(datas):
         context_without_variable = ""
         for sent_id, sent_info in data_item['sent_dict'].items():
             context_without_variable += f"{sent_id}: {sent_info['sent']} "
-        assert context_without_variable == data_item['context'] + ' ' + data_item['option'] + ' '
+        assert context_without_variable == data_item['meta_info']['context'] + ' ' + data_item['meta_info']['option'] + ' '
 
         data_item['context_with_variable'] = context_with_variable
         data_item['context_without_variable'] = context_without_variable
 
         # gold information
-        proof_str = data_item['proof_without_and'].replace('[STEP_SPLITTER]', ';')
+        # proof_str = data_item['proof_without_and'].replace('[STEP_SPLITTER]', ';')
+        proof_str = data_item['proof']
         proof = parse_proof(proof_str, spliter = ';', single_premise = True, flag = '')
 
         triples_dict = {}
         triples_str_dict = {}
         for sent_id, sent_info in data_item['sent_dict'].items():
-            triples = sent_info['inner_info']['formulae_triples']
+            triples = sent_info['inner_info']['formula_triples']
             triples_dict[sent_id] = triples
 
             triples_str = linearize_inner_triples(triples, flag = '')
